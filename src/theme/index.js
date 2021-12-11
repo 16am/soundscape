@@ -1,5 +1,7 @@
 import { extendTheme } from "@chakra-ui/react";
 
+const styles = {};
+
 const colors = {
   brand: {
     900: "#1a365d",
@@ -8,4 +10,4 @@ const colors = {
   },
 };
 
-export const theme = extendTheme({ colors });
+export const theme = extendTheme({ styles, colors });

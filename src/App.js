@@ -1,19 +1,42 @@
-import logo from "./theme/logo.svg";
-import { Box } from "@chakra-ui/layout";
+import { Box, Flex } from "@chakra-ui/layout";
+import { Route, Routes } from "react-router-dom";
+import { Credits } from "./components/Credits";
+import { Maps } from "./components/Maps";
+import { Navigation } from "./components/Navigation";
+import { Welcome } from "./components/Welcome";
+import "./theme/index.css";
+import bg from "./theme/background.png";
+import { useColorModeValue } from "@chakra-ui/color-mode";
 
 function App() {
   return (
-    <Box>
-      <header className="App-header">
-        <img src={logo} alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-          Learn React
-        </a>
-      </header>
-    </Box>
+    <Flex
+      flexDir="column"
+      textAlign="center"
+      alignItems="center"
+      justifyContent="center"
+      h="100vh"
+      // bgImage={bg}
+      bgPos="center"
+      bgSize="cover"
+      pos="relative"
+      zIndex="1"
+    >
+      <Navigation />
+      <Routes>
+        <Route path="/" element={<Welcome />} />
+        <Route path="maps" element={<Maps />} />
+        <Route path="credits" element={<Credits />} />
+      </Routes>
+      <Box
+        d="none"
+        w="100vw"
+        h="100vh"
+        bg={useColorModeValue("whiteAlpha.800", "blackAlpha.800")}
+        pos="fixed"
+        zIndex="1"
+      ></Box>
+    </Flex>
   );
 }
 
