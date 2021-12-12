@@ -1,13 +1,10 @@
-import { Button } from "@chakra-ui/button";
 import { useColorModeValue } from "@chakra-ui/color-mode";
 import { Box, Center, Flex, Heading } from "@chakra-ui/layout";
-import ParentSize from "@visx/responsive/lib/components/ParentSize";
-import Map from "./Map";
 import {
   Slider,
-  SliderTrack,
   SliderFilledTrack,
   SliderThumb,
+  SliderTrack,
 } from "@chakra-ui/react";
 import { useState } from "react";
 
@@ -18,11 +15,10 @@ const keyMoments = [
   "Today w/Soundscape running normally",
 ];
 
-const bgs = ["#fe6100", "#fe8200", "#fea300", "#fec400"];
+const bgs = ["#0061ba", "#0082ba", "#00a3ba", "#00c4ba"];
 
 export function Maps() {
   const [selectedMap, setSelectedMap] = useState(0);
-  const selectedMapColor = useColorModeValue("pink.400", "pink.200");
   const selectedMapBg = useColorModeValue("gray.200", "gray.700");
   return (
     <>

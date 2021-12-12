@@ -1,6 +1,6 @@
 import { Button } from "@chakra-ui/button";
 import { Box, Flex } from "@chakra-ui/layout";
-import { useColorMode } from "@chakra-ui/color-mode";
+import { useColorMode, useColorModeValue } from "@chakra-ui/color-mode";
 import { useNavigate } from "react-router";
 import { RiHome2Fill } from "react-icons/ri";
 
@@ -25,7 +25,7 @@ export function Navigation() {
           mr="-1"
           variant="ghost"
           borderRadius="full"
-          colorScheme="gray"
+          colorScheme={useColorModeValue("blackAlpha", "gray")}
           onClick={() => navigate("/")}
         >
           <RiHome2Fill />
@@ -35,7 +35,7 @@ export function Navigation() {
           ml="3"
           variant="outline"
           borderRadius="full"
-          colorScheme="gray"
+          colorScheme={useColorModeValue("blackAlpha", "gray")}
           onClick={() => navigate("/hydrophones")}
         >
           Hydrophones
@@ -45,7 +45,7 @@ export function Navigation() {
           ml="3"
           variant="outline"
           borderRadius="full"
-          colorScheme="gray"
+          colorScheme={useColorModeValue("blackAlpha", "gray")}
           onClick={() => navigate("/maps")}
         >
           Maps
@@ -55,7 +55,7 @@ export function Navigation() {
           ml="3"
           variant="outline"
           borderRadius="full"
-          colorScheme="gray"
+          colorScheme={useColorModeValue("blackAlpha", "gray")}
           onClick={() => navigate("/credits")}
         >
           Credits
@@ -67,7 +67,7 @@ export function Navigation() {
           ml="3"
           variant="outline"
           borderRadius="full"
-          colorScheme="gray"
+          colorScheme={useColorModeValue("blackAlpha", "gray")}
           onClick={toggleColorMode}
         >
           {colorMode === "light" ? "Dark" : "Light"}
