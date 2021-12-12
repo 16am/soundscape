@@ -1,5 +1,5 @@
 import { useColorModeValue } from "@chakra-ui/color-mode";
-import { Box, Link } from "@chakra-ui/layout";
+import { Box, Link, Text } from "@chakra-ui/layout";
 
 export function Credits() {
   const linkColor = useColorModeValue("pink.500", "pink.200");
@@ -27,8 +27,8 @@ export function Credits() {
         risus scelerisque congue et eget mauris. In nec sapien nunc. Etiam
         iaculis urna id mollis viverra.
       </Box>
-      <Box mt="4">
-        Idea, Texts & Pictures
+      <Box mt="20">
+        <Text mb="2">Words and pictures</Text>
         <Box>
           <b>Elisabetta Zavoli</b>
           <Link to="#" color={linkColor} isExternal ml="2">
@@ -42,8 +42,8 @@ export function Credits() {
           </Link>
         </Box>
       </Box>
-      <Box mt="4">
-        Web design
+      <Box mt="8">
+        <Text mb="2">Web design</Text>
         <Box>
           <b>Alessandro D'Alfonso</b>
           <Link to="#" color={linkColor} isExternal ml="2">
@@ -51,6 +51,16 @@ export function Credits() {
           </Link>
         </Box>
       </Box>
+      <Box mt="8">
+        <Text mb="2">More credits</Text>
+        <Box>
+          <b>Lorem Institute</b>
+          <Link to="#" color={linkColor} isExternal ml="2">
+            @twitter_account
+          </Link>
+        </Box>
+      </Box>
+      <Box mt="12"></Box>
     </>
   );
 }
