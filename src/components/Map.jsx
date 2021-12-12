@@ -157,9 +157,9 @@ export default function Map({ width, height, events = true }) {
                 >
                   -
                 </button>
-                <button className="btn btn-lg" onClick={zoom.reset}>
+                {/* <button className="btn btn-lg" onClick={zoom.reset}>
                   Reset
-                </button>
+                </button> */}
               </div>
             )}
           </div>

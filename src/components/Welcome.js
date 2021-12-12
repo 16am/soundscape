@@ -3,12 +3,20 @@ import { useColorModeValue } from "@chakra-ui/color-mode";
 import { Image } from "@chakra-ui/image";
 import { Box } from "@chakra-ui/layout";
 import { Link } from "react-router-dom";
-import logo from "../theme/logo.svg";
+import logo from "../theme/logo_13.svg";
 
 export function Welcome() {
   return (
     <>
-      <Image src={logo} alt="logo" w="48" mb="3" pos="relative" zIndex="2" />
+      <Image
+        src={logo}
+        alt="logo"
+        w="48"
+        mb="3"
+        mx="auto"
+        pos="relative"
+        zIndex="2"
+      />
       <Box
         fontSize={{ base: "3xl", sm: "4xl" }}
         fontWeight="extrabold"
