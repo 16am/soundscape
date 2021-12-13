@@ -192,7 +192,7 @@ export function Hydrophones({ language }) {
             .sort()
             .map((h, i) => (
               <Radio mx="2" key={i} value={h}>
-                {languages[h]["EN"]}
+                {languages[h][language]}
               </Radio>
             ))}
         </RadioGroup>
