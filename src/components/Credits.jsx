@@ -2,7 +2,7 @@ import { useColorModeValue } from "@chakra-ui/color-mode";
 import { Box, Link, Text } from "@chakra-ui/layout";
 
 export function Credits() {
-  const linkColor = useColorModeValue("pink.500", "pink.200");
+  const linkColor = useColorModeValue("cyan.400", "cyan.700");
   return (
     <>
       <Box
@@ -30,15 +30,15 @@ export function Credits() {
       <Box mt="20">
         <Text mb="2">Words and pictures</Text>
         <Box>
-          <b>Elisabetta Zavoli</b>
+          <b>Francesco Martinelli</b>
           <Link to="#" color={linkColor} isExternal ml="2">
-            @elizavoli
+            @fra####
           </Link>
         </Box>
         <Box>
-          <b>Francesco ####</b>
+          <b>Elisabetta Zavoli</b>
           <Link to="#" color={linkColor} isExternal ml="2">
-            @fra####
+            @elizavoli
           </Link>
         </Box>
       </Box>

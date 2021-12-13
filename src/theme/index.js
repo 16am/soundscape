@@ -26,21 +26,9 @@ const colors = {
     800: "#153e75",
     700: "#2a69ac",
   },
-  blue: {
-    50: "blue",
-    100: "blue",
-    200: "blue",
-    300: "blue",
-    400: "blue",
-    500: "blue",
-    600: "blue",
-    700: "blue",
-    800: "blue",
-    900: "blue",
-  },
 };
 
 export const theme = extendTheme(
-  withDefaultColorScheme({ colorScheme: "pink" }),
+  withDefaultColorScheme({ colorScheme: "cyan" }),
   { styles, colors, fonts }
 );

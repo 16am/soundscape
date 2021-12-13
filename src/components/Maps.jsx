@@ -1,12 +1,10 @@
+import { Button } from "@chakra-ui/button";
 import { useColorModeValue } from "@chakra-ui/color-mode";
-import { Box, Center, Flex, Heading } from "@chakra-ui/layout";
-import {
-  Slider,
-  SliderFilledTrack,
-  SliderThumb,
-  SliderTrack,
-} from "@chakra-ui/react";
+import { Box, Center, Flex, Heading, Link, Text } from "@chakra-ui/layout";
+import { ParentSize } from "@visx/responsive";
 import { useState } from "react";
+import Map from "./Map";
+import { NivoMap } from "./NivoMap";
 
 const keyMoments = [
   "Before Soundscape",
@@ -15,11 +13,11 @@ const keyMoments = [
   "Today w/Soundscape running normally",
 ];
 
-const bgs = ["#0061ba", "#0082ba", "#00a3ba", "#00c4ba"];
+const bgs = ["#0082ba", "#0093ba", "#00a4ba", "#00b5ba"];
 
 export function Maps() {
   const [selectedMap, setSelectedMap] = useState(0);
-  const selectedMapBg = useColorModeValue("gray.200", "gray.700");
+  const textColor = useColorModeValue("gray.900", "gray.100");
   return (
     <>
       <Box
@@ -29,7 +27,7 @@ export function Maps() {
         h="100vh"
         zIndex="0"
         pos="fixed"
-        opacity="0.2"
+        opacity="0"
         bg={bgs[selectedMap]}
       ></Box>
       <Box pos="relative" zIndex="1">
@@ -41,62 +39,28 @@ export function Maps() {
           letterSpacing="tight"
           fontWeight="extrabold"
           fontSize={{ base: "3xl", sm: "4xl" }}
-          color={useColorModeValue("gray.900", "gray.100")}
+          color={textColor}
         >
           Maps
         </Box>
-        <Flex flexDir="column" pos="relative" zIndex="3">
-          <Flex mb="4" d="none">
-            <Box d="none">
-              <Box
-                overflow="hidden"
-                boxShadow="0 0 40px rgba(255, 255, 255, 0.25)"
-                bg="rgba(0, 0, 0, 0.25)"
-                borderRadius="2xl"
-                mr="4"
-              >
-                <Center w="230px" h="100px">
-                  Map 1
-                </Center>
-                {/* <Map events={false} width={230} height={100} /> */}
-              </Box>
-              <Box
-                overflow="hidden"
-                boxShadow="0 0 40px rgba(255, 255, 255, 0.25)"
-                bg="rgba(0, 0, 0, 0.25)"
-                borderRadius="2xl"
-                mr="4"
-              >
-                <Center w="230px" h="100px">
-                  Map 2
-                </Center>
-                {/* <Map events={false} width={230} height={100} /> */}
-              </Box>
-              <Box
-                overflow="hidden"
-                boxShadow="0 0 40px rgba(255, 255, 255, 0.25)"
-                bg="rgba(0, 0, 0, 0.25)"
-                borderRadius="2xl"
-              >
-                <Center w="230px" h="100px">
-                  Map 3
-                </Center>
-                {/* <Map events={false} width={230} height={100} /> */}
-              </Box>
-            </Box>
-          </Flex>
-          <Box borderRadius="2xl" overflow="hidden" bg={bgs[selectedMap]}>
-            <Center w="full" h="300px" fontWeight="extrabold">
-              <Heading>{selectedMap + 1}</Heading>
-            </Center>
-            {/* <ParentSize>
-            {({ width, height }) => <Map width={width} height={height} />}
-          </ParentSize> */}
-          </Box>
+
+        <Flex w="full" justifyContent="center" my="4" fontWeight="extrabold">
+          {keyMoments[selectedMap]}
         </Flex>
 
-        <Flex w="full" justifyContent="center" mt="4" fontWeight="extrabold">
-          {keyMoments[selectedMap]}
+        <Flex flexDir="column" pos="relative" zIndex="3">
+          <Box
+            borderRadius="2xl"
+            overflow="hidden"
+            bg={bgs[selectedMap]}
+            opacity="0.8"
+            w="full"
+            h="320px"
+          >
+            <Center w="full" h="300px" fontWeight="extrabold">
+              <NivoMap />
+            </Center>
+          </Box>
         </Flex>
 
         <Flex w="full" my="4" justifyContent="center">
@@ -104,46 +68,97 @@ export function Maps() {
             <Box
               mx="2"
               key={i}
-              borderWidth={2}
-              cursor="pointer"
-              overflow="hidden"
-              borderRadius="2xl"
+              minH="16"
+              as={Button}
               bg={bgs[map]}
+              opacity="0.7"
+              borderRadius="2xl"
               onClick={() => setSelectedMap(map)}
-              borderColor={
-                selectedMap === map ? "blackAlpha.200" : "blackAlpha.50"
-              }
+              _hover={{ bg: bgs[map], opacity: 0.8 }}
             >
-              <Center w="90px" h="60px" fontWeight="extrabold">
+              <Center
+                w="90px"
+                h="60px"
+                fontWeight="extrabold"
+                color={textColor}
+              >
                 {map + 1}
               </Center>
             </Box>
           ))}
         </Flex>
-
-        <Flex
-          d="none"
-          px={{ base: "2", sm: "12", md: "36" }}
-          w="full"
-          mt="4"
-          flexDir="column"
+        <Link
+          fontSize="xs"
+          color="gray.500"
+          href="https://levelup.gitconnected.com/react-d3-rendering-a-map-5e006b2f4895"
+          isExternal
         >
-          <Slider
-            min={0}
-            max={3}
-            step={1}
-            size="sm"
-            value={selectedMap}
-            aria-label="map-selector"
-            onChange={(val) => setSelectedMap(val)}
-          >
-            <SliderTrack bg={selectedMapBg}>
-              <SliderFilledTrack bg="pink.300" />
-            </SliderTrack>
-            <SliderThumb bg="pink.400" />
-          </Slider>
-        </Flex>
+          https://levelup.gitconnected.com/react-d3-rendering-a-map-5e006b2f4895
+        </Link>
       </Box>
     </>
   );
 }
+
+// <Flex mb="4" d="none">
+//             <Box d="none">
+//               <Box
+//                 overflow="hidden"
+//                 boxShadow="0 0 40px rgba(255, 255, 255, 0.25)"
+//                 bg="rgba(0, 0, 0, 0.25)"
+//                 borderRadius="2xl"
+//                 mr="4"
+//               >
+//                 <Center w="230px" h="100px">
+//                   Map 1
+//                 </Center>
+//                 {/* <Map events={false} width={230} height={100} /> */}
+//               </Box>
+//               <Box
+//                 overflow="hidden"
+//                 boxShadow="0 0 40px rgba(255, 255, 255, 0.25)"
+//                 bg="rgba(0, 0, 0, 0.25)"
+//                 borderRadius="2xl"
+//                 mr="4"
+//               >
+//                 <Center w="230px" h="100px">
+//                   Map 2
+//                 </Center>
+//                 {/* <Map events={false} width={230} height={100} /> */}
+//               </Box>
+//               <Box
+//                 overflow="hidden"
+//                 boxShadow="0 0 40px rgba(255, 255, 255, 0.25)"
+//                 bg="rgba(0, 0, 0, 0.25)"
+//                 borderRadius="2xl"
+//               >
+//                 <Center w="230px" h="100px">
+//                   Map 3
+//                 </Center>
+//                 {/* <Map events={false} width={230} height={100} /> */}
+//               </Box>
+//             </Box>
+//           </Flex>
+
+// <Flex
+//           d="none"
+//           px={{ base: "2", sm: "12", md: "36" }}
+//           w="full"
+//           mt="4"
+//           flexDir="column"
+//         >
+//           <Slider
+//             min={0}
+//             max={3}
+//             step={1}
+//             size="sm"
+//             value={selectedMap}
+//             aria-label="map-selector"
+//             onChange={(val) => setSelectedMap(val)}
+//           >
+//             <SliderTrack bg={selectedMapBg}>
+//               <SliderFilledTrack bg="pink.300" />
+//             </SliderTrack>
+//             <SliderThumb bg="pink.400" />
+//           </Slider>
+//         </Flex>

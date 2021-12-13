@@ -34,17 +34,17 @@ const color = scaleQuantize({
   ],
   range: [
     "#019ece",
-    "#f4448b",
-    "#fccf35",
-    "#82b75d",
-    "#b33c88",
-    "#fc5e2f",
-    "#f94b3a",
-    "#f63a48",
-    "#dde1fe",
-    "#8993f9",
-    "#b6c8fb",
-    "#65fe8d",
+    // "#f4448b",
+    // "#fccf35",
+    // "#82b75d",
+    // "#b33c88",
+    // "#fc5e2f",
+    // "#f94b3a",
+    // "#f63a48",
+    // "#dde1fe",
+    // "#8993f9",
+    // "#b6c8fb",
+    // "#65fe8d",
   ],
 });
 
@@ -57,7 +57,7 @@ export default function Map({ width, height, events = true }) {
 
   return width < 10 ? null : (
     <>
-      <Zoom
+      {/* <Zoom
         width={width}
         height={height}
         scaleXMin={100}
@@ -73,59 +73,59 @@ export default function Map({ width, height, events = true }) {
           skewY: 0,
         }}
       >
-        {(zoom) => (
-          <div className="container">
-            <svg
-              width={width}
-              height={height}
-              className={zoom.isDragging ? "dragging" : undefined}
-              ref={zoom.containerRef}
-              style={{ touchAction: "none" }}
-            >
-              <rect
-                x={0}
-                y={0}
-                width={width}
-                height={height}
-                fill={background}
-                rx={14}
-              />
-              <CustomProjection
-                projection={PROJECTIONS[projection]}
-                data={world.features}
-                scale={zoom.transformMatrix.scaleX}
-                translate={[
-                  zoom.transformMatrix.translateX,
-                  zoom.transformMatrix.translateY,
-                ]}
-              >
-                {(customProjection) => (
-                  <g>
-                    <Graticule
-                      graticule={(g) => customProjection.path(g) || ""}
-                      stroke={purple}
-                    />
-                    {customProjection.features.map(({ feature, path }, i) => (
-                      <path
-                        key={`map-feature-${i}`}
-                        d={path || ""}
-                        fill={color(feature.geometry.coordinates.length)}
-                        stroke={background}
-                        strokeWidth={0.5}
-                        onClick={() => {
-                          if (events)
-                            alert(
-                              `Clicked: ${feature.properties.name} (${feature.id})`
-                            );
-                        }}
-                      />
-                    ))}
-                  </g>
-                )}
-              </CustomProjection>
+        {(zoom) => ( */}
+      <div className="container">
+        <svg
+          width={width}
+          height={height}
+          // className={zoom.isDragging ? "dragging" : undefined}
+          // ref={zoom.containerRef}
+          style={{ touchAction: "none" }}
+        >
+          <rect
+            x={0}
+            y={0}
+            width={width}
+            height={height}
+            fill={background}
+            rx={14}
+          />
+          <CustomProjection
+            projection={PROJECTIONS[projection]}
+            data={world.features}
+            // scale={zoom.transformMatrix.scaleX}
+            // translate={[
+            //   zoom.transformMatrix.translateX,
+            //   zoom.transformMatrix.translateY,
+            // ]}
+          >
+            {(customProjection) => (
+              <g>
+                <Graticule
+                  graticule={(g) => customProjection.path(g) || ""}
+                  stroke={purple}
+                />
+                {customProjection.features.map(({ feature, path }, i) => (
+                  <path
+                    key={`map-feature-${i}`}
+                    d={path || ""}
+                    fill={color(feature.geometry.coordinates.length)}
+                    stroke={background}
+                    strokeWidth={0.5}
+                    onClick={() => {
+                      if (events)
+                        alert(
+                          `Clicked: ${feature.properties.name} (${feature.id})`
+                        );
+                    }}
+                  />
+                ))}
+              </g>
+            )}
+          </CustomProjection>
 
-              {/** intercept all mouse events */}
-              <rect
+          {/** intercept all mouse events */}
+          {/* <rect
                 x={0}
                 y={0}
                 width={width}
@@ -141,9 +141,9 @@ export default function Map({ width, height, events = true }) {
                 onMouseLeave={() => {
                   if (zoom.isDragging) zoom.dragEnd();
                 }}
-              />
-            </svg>
-            {events && (
+              /> */}
+        </svg>
+        {/* {events && (
               <div className="controls">
                 <button
                   className="btn btn-zoom"
@@ -157,14 +157,14 @@ export default function Map({ width, height, events = true }) {
                 >
                   -
                 </button>
-                {/* <button className="btn btn-lg" onClick={zoom.reset}>
+                <button className="btn btn-lg" onClick={zoom.reset}>
                   Reset
-                </button> */}
+                </button>
               </div>
-            )}
-          </div>
-        )}
-      </Zoom>
+            )} */}
+      </div>
+
+      {/* </Zoom> */}
       <style jsx>{`
         .container {
           position: relative;

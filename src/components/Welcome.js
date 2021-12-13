@@ -23,26 +23,33 @@ export function Welcome() {
         letterSpacing="tight"
         lineHeight="1"
         color={useColorModeValue("gray.900", "gray.100")}
-        mb={6}
+        mb={8}
         pos="relative"
         zIndex="2"
       >
         <Box>Soundscape</Box>
-        <Box color={useColorModeValue("brand.600", "gray.500")}>
+        <Box color={useColorModeValue("gray.400", "gray.500")}>
           Ready to dive in?
         </Box>
-        <Button
-          size="lg"
-          variant="outline"
-          borderRadius="full"
-          colorScheme="gray"
-          mt="12"
-          as={Link}
-          to="/maps"
-        >
-          Enter
-        </Button>
       </Box>
+      <Box
+        color={useColorModeValue("gray.500", "gray.500")}
+        px={{ base: 0, sm: 4, md: 12, lg: 14, xl: 20 }}
+      >
+        Nulla lacinia, orci non sagittis fermentum, tellus dolor pellentesque
+        tellus, vel pellentesque libero eros.
+      </Box>
+      <Button
+        size="lg"
+        variant="outline"
+        borderRadius="full"
+        colorScheme={useColorModeValue("blackAlpha", "gray")}
+        mt="8"
+        as={Link}
+        to="/hydrophones"
+      >
+        Enter
+      </Button>
     </>
   );
 }

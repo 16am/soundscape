@@ -31,7 +31,7 @@ function App() {
       py="32"
     >
       <Navigation />
-      <Container>
+      <Container maxW="2xl">
         <Routes>
           <Route path="/" element={<Welcome />} />
           <Route path="maps" element={<Maps />} />
