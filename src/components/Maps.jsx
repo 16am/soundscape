@@ -7,10 +7,10 @@ import Map from "./Map";
 import { NivoMap } from "./NivoMap";
 
 const keyMoments = [
-  "Before Soundscape",
-  "During first lockdown for Covid-19",
-  "After 6 months of hydrophone installed",
-  "Today w/Soundscape running normally",
+  { title: "Before Soundscape", description: "" },
+  { title: "During first lockdown for Covid-19", description: "" },
+  { title: "After 6 months of hydrophone installed", description: "" },
+  { title: "Today w/Soundscape running normally", description: "" },
 ];
 
 const bgs = ["#0082ba", "#0093ba", "#00a4ba", "#00b5ba"];
@@ -45,7 +45,11 @@ export function Maps() {
         </Box>
 
         <Flex w="full" justifyContent="center" my="4" fontWeight="extrabold">
-          {keyMoments[selectedMap]}
+          {keyMoments[selectedMap].title}
+        </Flex>
+
+        <Flex w="full" justifyContent="center" my="4" fontWeight="extrabold">
+          {keyMoments[selectedMap].description}
         </Flex>
 
         <Flex flexDir="column" pos="relative" zIndex="3">
@@ -92,73 +96,8 @@ export function Maps() {
           color="gray.500"
           href="https://levelup.gitconnected.com/react-d3-rendering-a-map-5e006b2f4895"
           isExternal
-        >
-          https://levelup.gitconnected.com/react-d3-rendering-a-map-5e006b2f4895
-        </Link>
+        ></Link>
       </Box>
     </>
   );
 }
-
-// <Flex mb="4" d="none">
-//             <Box d="none">
-//               <Box
-//                 overflow="hidden"
-//                 boxShadow="0 0 40px rgba(255, 255, 255, 0.25)"
-//                 bg="rgba(0, 0, 0, 0.25)"
-//                 borderRadius="2xl"
-//                 mr="4"
-//               >
-//                 <Center w="230px" h="100px">
-//                   Map 1
-//                 </Center>
-//                 {/* <Map events={false} width={230} height={100} /> */}
-//               </Box>
-//               <Box
-//                 overflow="hidden"
-//                 boxShadow="0 0 40px rgba(255, 255, 255, 0.25)"
-//                 bg="rgba(0, 0, 0, 0.25)"
-//                 borderRadius="2xl"
-//                 mr="4"
-//               >
-//                 <Center w="230px" h="100px">
-//                   Map 2
-//                 </Center>
-//                 {/* <Map events={false} width={230} height={100} /> */}
-//               </Box>
-//               <Box
-//                 overflow="hidden"
-//                 boxShadow="0 0 40px rgba(255, 255, 255, 0.25)"
-//                 bg="rgba(0, 0, 0, 0.25)"
-//                 borderRadius="2xl"
-//               >
-//                 <Center w="230px" h="100px">
-//                   Map 3
-//                 </Center>
-//                 {/* <Map events={false} width={230} height={100} /> */}
-//               </Box>
-//             </Box>
-//           </Flex>
-
-// <Flex
-//           d="none"
-//           px={{ base: "2", sm: "12", md: "36" }}
-//           w="full"
-//           mt="4"
-//           flexDir="column"
-//         >
-//           <Slider
-//             min={0}
-//             max={3}
-//             step={1}
-//             size="sm"
-//             value={selectedMap}
-//             aria-label="map-selector"
-//             onChange={(val) => setSelectedMap(val)}
-//           >
-//             <SliderTrack bg={selectedMapBg}>
-//               <SliderFilledTrack bg="pink.300" />
-//             </SliderTrack>
-//             <SliderThumb bg="pink.400" />
-//           </Slider>
-//         </Flex>
