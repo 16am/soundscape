@@ -4,8 +4,9 @@ import { Image } from "@chakra-ui/image";
 import { Box } from "@chakra-ui/layout";
 import { Link } from "react-router-dom";
 import logo from "../theme/logo_13.svg";
+import { languages } from "../language/languages";
 
-export function Welcome() {
+export function Welcome({ language }) {
   return (
     <>
       <Image
@@ -29,15 +30,14 @@ export function Welcome() {
       >
         <Box>Soundscape</Box>
         <Box color={useColorModeValue("gray.400", "gray.500")}>
-          Ready to dive in?
+          {languages.ready[language]}
         </Box>
       </Box>
       <Box
         color={useColorModeValue("gray.500", "gray.500")}
         px={{ base: 0, sm: 4, md: 12, lg: 14, xl: 20 }}
       >
-        Nulla lacinia, orci non sagittis fermentum, tellus dolor pellentesque
-        tellus, vel pellentesque libero eros.
+        {languages["description"][language]}
       </Box>
       <Button
         size="lg"
@@ -48,7 +48,7 @@ export function Welcome() {
         as={Link}
         to="/hydrophones"
       >
-        Enter
+        {languages["enter"][language]}
       </Button>
     </>
   );

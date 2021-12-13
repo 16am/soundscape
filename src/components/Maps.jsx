@@ -5,6 +5,7 @@ import { ParentSize } from "@visx/responsive";
 import { useState } from "react";
 import Map from "./Map";
 import { NivoMap } from "./NivoMap";
+import { languages } from "../language/languages";
 
 const keyMoments = [
   { title: "Before Soundscape", description: "" },
@@ -15,7 +16,7 @@ const keyMoments = [
 
 const bgs = ["#0082ba", "#0093ba", "#00a4ba", "#00b5ba"];
 
-export function Maps() {
+export function Maps({ language }) {
   const [selectedMap, setSelectedMap] = useState(0);
   const textColor = useColorModeValue("gray.900", "gray.100");
   return (
@@ -41,7 +42,7 @@ export function Maps() {
           fontSize={{ base: "3xl", sm: "4xl" }}
           color={textColor}
         >
-          Maps
+          {languages.maps[language]}
         </Box>
 
         <Flex w="full" justifyContent="center" my="4" fontWeight="extrabold">

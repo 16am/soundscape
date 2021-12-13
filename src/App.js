@@ -1,23 +1,26 @@
+import { Container, Flex } from "@chakra-ui/layout";
 import "@fontsource/poppins/100.css";
 import "@fontsource/poppins/400.css";
 import "@fontsource/poppins/700.css";
 import "@fontsource/poppins/800.css";
 import "@fontsource/poppins/900.css";
-
-import { Box, Container, Flex } from "@chakra-ui/layout";
+import { useState } from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
 import { Credits } from "./components/Credits";
+import { Hydrophones } from "./components/Hydrophones";
 import { Maps } from "./components/Maps";
 import { Navigation } from "./components/Navigation";
 import { Welcome } from "./components/Welcome";
 import "./theme/index.css";
-import bg from "./theme/background.png";
-import { useColorModeValue } from "@chakra-ui/color-mode";
-import { Hydrophones } from "./components/Hydrophones";
 
 function App() {
   const { pathname } = useLocation();
-  console.log(pathname);
+  const [language, setLanguage] = useState("EN");
+
+  function handleLanguageChange() {
+    setLanguage(language === "EN" ? "IT" : "EN");
+  }
+
   return (
     <Flex
       flexDir="column"
@@ -32,13 +35,16 @@ function App() {
       zIndex="1"
       py="32"
     >
-      <Navigation />
+      <Navigation onLanguageChange={handleLanguageChange} language={language} />
       <Container maxW={pathname === "/maps" ? "6xl" : "2xl"}>
         <Routes>
-          <Route path="/" element={<Welcome />} />
-          <Route path="maps" element={<Maps />} />
-          <Route path="credits" element={<Credits />} />
-          <Route path="hydrophones" element={<Hydrophones />} />
+          <Route path="/" element={<Welcome language={language} />} />
+          <Route path="maps" element={<Maps language={language} />} />
+          <Route path="credits" element={<Credits language={language} />} />
+          <Route
+            path="hydrophones"
+            element={<Hydrophones language={language} />}
+          />
         </Routes>
       </Container>
       {/* <Box

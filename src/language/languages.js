@@ -1,0 +1,32 @@
+export const languages = {
+  home: { IT: "Home", EN: "Home" },
+  enter: { IT: "Entra", EN: "Enter" },
+  maps: { IT: "Mappe", EN: "Maps" },
+  hydrophones: { IT: "Idrofoni", EN: "Hydrophones" },
+  credits: { IT: "Crediti", EN: "Credits" },
+  light: { IT: "Chiaro", EN: "Light" },
+  dark: { IT: "Scuro", EN: "Dark" },
+  ready: { IT: "Facciamo un tuffo?", EN: "Ready to dive in?" },
+  noise: { IT: "Rumore", EN: "Noise" },
+  noise_level: { IT: "Livello di rumore", EN: "Noise level" },
+  code: { IT: "Codice", EN: "Code" },
+  name: { IT: "Nome", EN: "Name" },
+  id: { IT: "ID", EN: "ID" },
+  coordinates: { IT: "Coordinate", EN: "Coordinates" },
+  country: { IT: "Paese", EN: "Country" },
+  word_and_pictures: { IT: "Testi e fotografie", EN: "Words and pictures" },
+  web_design: { IT: "Web design", EN: "Web design" },
+  more_credits: { IT: "Altri crediti", EN: "More credits" },
+  description: {
+    IT: "Nulla lacinia, orci non sagittis fermentum, tellus dolor pellentesque tellus, vel pellentesque libero eros.",
+    EN: "Nihil lacinia, orci non sagittis fermentum, tellus dolor pellentesque tellus, vel pellentesque libero eros.",
+  },
+  hydrophones_description: {
+    IT: "Nulla lacinia, orci non sagittis fermentum, tellus dolor pellentesque tellus, vel pellentesque libero eros.",
+    EN: "Nihil lacinia, orci non sagittis fermentum, tellus dolor pellentesque tellus, vel pellentesque libero eros.",
+  },
+  credits_description: {
+    IT: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc cursus, ante vitae sollicitudin rutrum, sem nisl porttitor nunc, id dignissim libero dui non lectus. Pellentesque eu aliquet sapien, in consequat tortor. Nulla lacinia, orci non sagittis fermentum, tellus dolor pellentesque tellus, vel pellentesque libero eros ac odio. Morbi ac purus ac risus ultrices vulputate sit amet quis leo. Morbi sed leo nec risus scelerisque congue et eget mauris. In nec sapien nunc. Etiam iaculis urna id mollis viverra.",
+    EN: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc cursus, ante vitae sollicitudin rutrum, sem nisl porttitor nunc, id dignissim libero dui non lectus. Pellentesque eu aliquet sapien, in consequat tortor. Nulla lacinia, orci non sagittis fermentum, tellus dolor pellentesque tellus, vel pellentesque libero eros ac odio. Morbi ac purus ac risus ultrices vulputate sit amet quis leo. Morbi sed leo nec risus scelerisque congue et eget mauris. In nec sapien nunc. Etiam iaculis urna id mollis viverra.",
+  },
+};

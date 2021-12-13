@@ -3,85 +3,87 @@ import { useColorModeValue } from "@chakra-ui/color-mode";
 import { Box, Flex, Heading, Text } from "@chakra-ui/layout";
 import { Progress } from "@chakra-ui/progress";
 import { Radio, RadioGroup } from "@chakra-ui/radio";
+import { chakra } from "@chakra-ui/system";
 import { useState } from "react";
 import { RiSortAsc, RiSortDesc } from "react-icons/ri";
+import { languages } from "../language/languages";
 
 const hydrophones = [
   {
     id: 1,
-    country: "ITALY",
+    country: { IT: "ITALIA", EN: "ITALY" },
     code: "CNR IRBIM",
-    name: "Ancona",
+    name: { IT: "Ancona", EN: "Ancona" },
     coordinates: [12.32, 42.05],
     noise: 58,
   },
   {
     id: 2,
-    country: "N/A",
+    country: { IT: "N.D.", EN: "N/A" },
     code: "IOF",
-    name: "International waters",
+    name: { IT: "Acque internazionali", EN: "International waters" },
     coordinates: [12.32, 42.05],
     noise: 45,
   },
   {
     id: 3,
-    country: "CROTIA",
+    country: { IT: "CROAZIA", EN: "CROTIA" },
     code: "BWI",
-    name: "Lošinj",
+    name: { IT: "Lussino", EN: "Lošinj" },
     coordinates: [14.5, 44.5],
     noise: 85,
   },
   {
     id: 4,
-    country: "ITALY",
+    country: { IT: "ITALIA", EN: "ITALY" },
     code: "CF",
-    name: "Rimini",
+    name: { IT: "Rimini", EN: "Rimini" },
     coordinates: [12.32, 42.05],
     noise: 75,
   },
   {
     id: 5,
-    country: "CROTIA",
+    country: { IT: "CROAZIA", EN: "CROTIA" },
     code: "IOF",
-    name: "Split",
+    name: { IT: "Spalato", EN: "Split" },
     coordinates: [12.32, 42.05],
     noise: 65,
   },
   {
     id: 6,
-    country: "CROTIA",
+    country: { IT: "CROAZIA", EN: "CROTIA" },
     code: "BWI",
-    name: "Susak",
+    name: { IT: "Susak", EN: "Susak" },
     coordinates: [12.32, 42.05],
     noise: 55,
   },
   {
     id: 7,
-    country: "ITALY",
+    country: { IT: "ITALIA", EN: "ITALY" },
     code: "ARPA FVG",
-    name: "Trieste",
+    name: { IT: "Trieste", EN: "Trieste" },
     coordinates: [12.32, 42.05],
     noise: 65,
   },
   {
     id: 8,
-    country: "ITALY",
+    country: { IT: "ITALIA", EN: "ITALY" },
     code: "CNR ISMAR",
-    name: "Venice",
+    name: { IT: "Venezia", EN: "Venice" },
     coordinates: [12.32, 42.05],
     noise: 75,
   },
   {
     id: 9,
-    country: "CROTIA",
+    country: { IT: "CROAZIA", EN: "CROTIA" },
     code: "IOF",
-    name: "Zirje",
+    name: { IT: "Zirje", EN: "Zirje" },
     coordinates: [12.32, 42.05],
     noise: 35,
   },
 ];
 
-function Hydrophone({ hydrophone }) {
+function Hydrophone({ hydrophone, language }) {
   const color = useColorModeValue("#E53E3E", "#E53E3E");
   return (
     <Flex alignItems="center" my="8">
@@ -121,10 +123,10 @@ function Hydrophone({ hydrophone }) {
             fontWeight="extrabold"
             color={useColorModeValue("gray.300", "gray.600")}
           >
-            {hydrophone.country}
+            {hydrophone.country[language]}
           </Text>
           <Flex alignItems="flex-end">
-            <Heading size="md">{hydrophone.name}</Heading>
+            <Heading size="md">{hydrophone.name[language]}</Heading>
             <Text ml="2" fontSize="sm" opacity="0.5">
               {hydrophone.code}
             </Text>
@@ -135,7 +137,7 @@ function Hydrophone({ hydrophone }) {
         </Box>
         <Flex flexDir="column" alignItems="flex-start">
           <Text fontSize="10px" color="gray.400" fontWeight="700">
-            NOISE LEVEL
+            {languages.noise_level[language]}
           </Text>
           <Progress
             my="1"
@@ -143,8 +145,11 @@ function Hydrophone({ hydrophone }) {
             w="40"
             borderRadius="full"
           />
-          <Text fontSize="10px" color="gray.400" fontWeight="700">
-            {hydrophone.noise}db
+          <Text fontSize="xs" color="gray.400">
+            <chakra.span color="cyan.500" fontWeight="800">
+              {hydrophone.noise}
+            </chakra.span>{" "}
+            db
           </Text>
         </Flex>
       </Flex>
@@ -152,7 +157,7 @@ function Hydrophone({ hydrophone }) {
   );
 }
 
-export function Hydrophones() {
+export function Hydrophones({ language }) {
   const [criteria, setCritera] = useState("noise");
   const [order, setOrder] = useState(true);
   return (
@@ -167,12 +172,10 @@ export function Hydrophones() {
         pos="relative"
         zIndex="2"
       >
-        <Box>Hydrophones</Box>
+        <Box>{languages.hydrophones[language]}</Box>
       </Box>
       <Box mb="8" px="10">
-        Pellentesque eu aliquet sapien, in consequat tortor. Nulla lacinia, orci
-        non sagittis fermentum, tellus dolor pellentesque tellus, vel
-        pellentesque libero eros ac odio.
+        {languages.hydrophones_description[language]}
       </Box>
 
       <Flex
@@ -189,7 +192,7 @@ export function Hydrophones() {
             .sort()
             .map((h, i) => (
               <Radio mx="2" key={i} value={h}>
-                {h}
+                {languages[h]["EN"]}
               </Radio>
             ))}
         </RadioGroup>
@@ -219,7 +222,7 @@ export function Hydrophones() {
         })
         .map((h, i) => (
           <Box key={i}>
-            <Hydrophone hydrophone={h} />
+            <Hydrophone hydrophone={h} language={language} />
           </Box>
         ))}
     </>
