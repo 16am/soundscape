@@ -5,7 +5,7 @@ import "@fontsource/poppins/800.css";
 import "@fontsource/poppins/900.css";
 
 import { Box, Container, Flex } from "@chakra-ui/layout";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import { Credits } from "./components/Credits";
 import { Maps } from "./components/Maps";
 import { Navigation } from "./components/Navigation";
@@ -16,6 +16,8 @@ import { useColorModeValue } from "@chakra-ui/color-mode";
 import { Hydrophones } from "./components/Hydrophones";
 
 function App() {
+  const { pathname } = useLocation();
+  console.log(pathname);
   return (
     <Flex
       flexDir="column"
@@ -31,7 +33,7 @@ function App() {
       py="32"
     >
       <Navigation />
-      <Container maxW="2xl">
+      <Container maxW={pathname === "/maps" ? "6xl" : "2xl"}>
         <Routes>
           <Route path="/" element={<Welcome />} />
           <Route path="maps" element={<Maps />} />

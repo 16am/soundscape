@@ -59,9 +59,9 @@ export function Maps() {
             bg={bgs[selectedMap]}
             opacity="0.8"
             w="full"
-            h="320px"
+            minH="60vh"
           >
-            <Center w="full" h="300px" fontWeight="extrabold">
+            <Center w="full" minH="60vh" fontWeight="extrabold">
               <NivoMap />
             </Center>
           </Box>
