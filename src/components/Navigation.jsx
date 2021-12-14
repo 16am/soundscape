@@ -77,7 +77,7 @@ export function Navigation({ onLanguageChange, language }) {
             : languages["light"][language]}
         </Button>
         <Button
-          d="n"
+          d="none"
           size="sm"
           ml="3"
           minW="12"
