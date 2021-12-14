@@ -36,7 +36,10 @@ function App() {
       py="32"
     >
       <Navigation onLanguageChange={handleLanguageChange} language={language} />
-      <Container maxW={pathname === "/maps" ? "6xl" : "2xl"}>
+      <Container
+        maxW={pathname === "/maps" ? "5xl" : "2xl"}
+        px={{ base: "6", sm: "0" }}
+      >
         <Routes>
           <Route path="/" element={<Welcome language={language} />} />
           <Route path="maps" element={<Maps language={language} />} />

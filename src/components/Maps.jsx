@@ -1,11 +1,14 @@
+import { Image } from "@chakra-ui/image";
 import { Button } from "@chakra-ui/button";
 import { useColorModeValue } from "@chakra-ui/color-mode";
-import { Box, Center, Flex, Heading, Link, Text } from "@chakra-ui/layout";
-import { ParentSize } from "@visx/responsive";
+import { Box, Center, Flex, Link } from "@chakra-ui/layout";
 import { useState } from "react";
-import Map from "./Map";
-import { NivoMap } from "./NivoMap";
 import { languages } from "../language/languages";
+
+import stage1 from "../data/stage1.png";
+import stage2 from "../data/stage2.png";
+import stage3 from "../data/stage3.png";
+import stage4 from "../data/stage4.png";
 
 const keyMoments = [
   { title: "Before Soundscape", description: "" },
@@ -15,6 +18,8 @@ const keyMoments = [
 ];
 
 const bgs = ["#0082ba", "#0093ba", "#00a4ba", "#00b5ba"];
+
+const maps = [stage1, stage2, stage3, stage4];
 
 export function Maps({ language }) {
   const [selectedMap, setSelectedMap] = useState(0);
@@ -63,33 +68,28 @@ export function Maps({ language }) {
             minH="60vh"
           >
             <Center w="full" minH="60vh" fontWeight="extrabold">
-              <NivoMap />
+              <Image src={maps[selectedMap]} alt="" />
             </Center>
           </Box>
         </Flex>
 
         <Flex w="full" my="4" justifyContent="center">
-          {[0, 1, 2, 3].map((map, i) => (
+          {maps.map((map, i) => (
             <Box
               mx="2"
               key={i}
               minH="16"
+              minW="32"
               as={Button}
               bg={bgs[map]}
               opacity="0.7"
+              bgImage={map}
+              bgSize="cover"
               borderRadius="2xl"
-              onClick={() => setSelectedMap(map)}
-              _hover={{ bg: bgs[map], opacity: 0.8 }}
-            >
-              <Center
-                w="90px"
-                h="60px"
-                fontWeight="extrabold"
-                color={textColor}
-              >
-                {map + 1}
-              </Center>
-            </Box>
+              borderColor={i === selectedMap ? "red.300" : "red.400"}
+              onClick={() => setSelectedMap(i)}
+              _hover={{ bgImage: map, opacity: 0.8, bgSize: "cover" }}
+            />
           ))}
         </Flex>
         <Link

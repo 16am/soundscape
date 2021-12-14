@@ -116,7 +116,12 @@ function Hydrophone({ hydrophone, language }) {
           </g>
         </svg>
       </Flex>
-      <Flex w="full" alignItems="center" justifyContent="space-between">
+      <Flex
+        w="full"
+        alignItems={{ base: "flex-start", sm: "center" }}
+        justifyContent="space-between"
+        flexDir={{ base: "column", sm: "row" }}
+      >
         <Box ml="4" textAlign="left">
           <Text
             fontSize="xs"
@@ -135,7 +140,11 @@ function Hydrophone({ hydrophone, language }) {
             {`[${hydrophone.coordinates[0]}, ${hydrophone.coordinates[1]}]`}
           </Flex>
         </Box>
-        <Flex flexDir="column" alignItems="flex-start">
+        <Flex
+          flexDir="column"
+          alignItems="flex-start"
+          ml={{ base: "4", sm: "0" }}
+        >
           <Text fontSize="10px" color="gray.400" fontWeight="700">
             {languages.noise_level[language]}
           </Text>
