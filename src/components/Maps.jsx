@@ -157,16 +157,6 @@ export function Maps({ language }) {
 
   return (
     <>
-      <Box
-        top="0"
-        left="0"
-        w="100vw"
-        h="100vh"
-        zIndex="0"
-        pos="fixed"
-        opacity="0"
-        bg={bgs[selectedMap]}
-      ></Box>
       <Box pos="relative" zIndex="1">
         <Box
           mb={6}
@@ -195,14 +185,10 @@ export function Maps({ language }) {
           <Box
             borderRadius="2xl"
             overflow="hidden"
-            bg={bgs[selectedMap]}
             w="full"
             minH="60vh"
             pos="relative"
             zIndex="1"
-            bgImage={maps[selectedMap]}
-            bgSize="cover"
-            bgPos="center"
           >
             <Legend d="none" language={language} />
             <Center w="full" minH="60vh" fontWeight="extrabold">
