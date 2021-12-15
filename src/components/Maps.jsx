@@ -182,9 +182,9 @@ export function Maps({ language }) {
         </Box>
 
         <Flex px={{ base: 0, sm: 16 }} flexDir="column">
-          <Flex w="full" justifyContent="center" my="4" fontWeight="extrabold">
+          {/* <Flex w="full" justifyContent="center" my="4" fontWeight="extrabold">
             {keyMoments[selectedMap].title}
-          </Flex>
+          </Flex> */}
 
           <Flex w="full" justifyContent="center" mb="8" fontWeight="regular">
             {keyMoments[selectedMap].description}
