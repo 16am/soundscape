@@ -242,7 +242,9 @@ export function Maps({ language }) {
                     onClick={() => setSelectedMap(i)}
                     _hover={{ bgImage: map, opacity: 0.8, bgSize: "cover" }}
                   />
-                  <Heading fontSize="sm">{keyMoments[i].title}</Heading>
+                  <Heading d="none" fontSize="sm">
+                    {keyMoments[i].title}
+                  </Heading>
                 </Flex>
               ))}
               {/* </Flex> */}

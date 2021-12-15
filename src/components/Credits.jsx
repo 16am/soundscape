@@ -18,12 +18,14 @@ export function Credits({ language }) {
       >
         <Box>{languages.credits[language]}</Box>
       </Box>
-      <Box mb="8">{languages.credits_description[language]}</Box>
+      <Box d="none" mb="8">
+        {languages.credits_description[language]}
+      </Box>
       <Box mt="20">
         <Text mb="2">{languages.word_and_pictures[language]}</Text>
         <Box>
           <b>Francesco Martinelli</b>
-          <Link href="#" color={linkColor} isExternal ml="2">
+          <Link d="none" href="#" color={linkColor} isExternal ml="2">
             @fra####
           </Link>
         </Box>
@@ -53,7 +55,7 @@ export function Credits({ language }) {
           </Link>
         </Box>
       </Box>
-      <Box mt="8">
+      <Box mt="8" d="none">
         <Text mb="2">{languages.more_credits[language]}</Text>
         <Box>
           <b>Lorem Institute</b>

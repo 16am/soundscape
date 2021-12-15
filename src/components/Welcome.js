@@ -34,6 +34,7 @@ export function Welcome({ language }) {
         </Box>
       </Box>
       <Box
+        d="none"
         color={useColorModeValue("gray.500", "gray.500")}
         px={{ base: 0, sm: 4, md: 12, lg: 14, xl: 20 }}
       >
