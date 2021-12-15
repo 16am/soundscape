@@ -1,5 +1,10 @@
 import { extendTheme, withDefaultColorScheme } from "@chakra-ui/react";
 
+const config = {
+  useSystemColorMode: false,
+  initialColorMode: "dark",
+};
+
 const styles = {
   global: {
     body: {
@@ -30,5 +35,5 @@ const colors = {
 
 export const theme = extendTheme(
   withDefaultColorScheme({ colorScheme: "cyan" }),
-  { styles, colors, fonts }
+  { config, styles, colors, fonts }
 );

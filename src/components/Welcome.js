@@ -10,23 +10,23 @@ export function Welcome({ language }) {
   return (
     <>
       <Image
-        src={logo}
-        alt="logo"
         w="48"
         mb="3"
         mx="auto"
-        pos="relative"
+        src={logo}
+        alt="logo"
         zIndex="2"
+        pos="relative"
       />
       <Box
-        fontSize={{ base: "3xl", sm: "4xl" }}
-        fontWeight="extrabold"
-        letterSpacing="tight"
-        lineHeight="1"
-        color={useColorModeValue("gray.900", "gray.100")}
         mb={8}
-        pos="relative"
         zIndex="2"
+        pos="relative"
+        lineHeight="1"
+        letterSpacing="tight"
+        fontWeight="extrabold"
+        fontSize={{ base: "3xl", sm: "4xl" }}
+        color={useColorModeValue("gray.900", "gray.100")}
       >
         <Box>Soundscape</Box>
         <Box color={useColorModeValue("gray.400", "gray.500")}>
@@ -40,13 +40,13 @@ export function Welcome({ language }) {
         {languages["description"][language]}
       </Box>
       <Button
+        mt="8"
+        as={Link}
         size="lg"
+        to="/maps"
         variant="outline"
         borderRadius="full"
         colorScheme={useColorModeValue("blackAlpha", "gray")}
-        mt="8"
-        as={Link}
-        to="/hydrophones"
       >
         {languages["enter"][language]}
       </Button>

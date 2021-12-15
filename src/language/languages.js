@@ -14,6 +14,7 @@ export const languages = {
   id: { IT: "ID", EN: "ID" },
   coordinates: { IT: "Coordinate", EN: "Coordinates" },
   country: { IT: "Paese", EN: "Country" },
+  legend: { IT: "Legenda", EN: "Legend" },
   word_and_pictures: { IT: "Testi e fotografie", EN: "Words and pictures" },
   web_design: { IT: "Web design", EN: "Web design" },
   more_credits: { IT: "Altri crediti", EN: "More credits" },

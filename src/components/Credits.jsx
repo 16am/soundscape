@@ -23,14 +23,19 @@ export function Credits({ language }) {
         <Text mb="2">{languages.word_and_pictures[language]}</Text>
         <Box>
           <b>Francesco Martinelli</b>
-          <Link to="#" color={linkColor} isExternal ml="2">
+          <Link href="#" color={linkColor} isExternal ml="2">
             @fra####
           </Link>
         </Box>
         <Box>
           <b>Elisabetta Zavoli</b>
-          <Link to="#" color={linkColor} isExternal ml="2">
-            @elizavoli
+          <Link
+            href="https://twitter.com/elizavola"
+            color={linkColor}
+            isExternal
+            ml="2"
+          >
+            @elizavola
           </Link>
         </Box>
       </Box>
@@ -38,7 +43,12 @@ export function Credits({ language }) {
         <Text mb="2">{languages.web_design[language]}</Text>
         <Box>
           <b>Alessandro D'Alfonso</b>
-          <Link to="#" color={linkColor} isExternal ml="2">
+          <Link
+            href="https://twitter.com/16amdotnet"
+            color={linkColor}
+            isExternal
+            ml="2"
+          >
             @16amdotnet
           </Link>
         </Box>
@@ -47,7 +57,7 @@ export function Credits({ language }) {
         <Text mb="2">{languages.more_credits[language]}</Text>
         <Box>
           <b>Lorem Institute</b>
-          <Link to="#" color={linkColor} isExternal ml="2">
+          <Link href="#" color={linkColor} isExternal ml="2">
             @twitter_account
           </Link>
         </Box>

@@ -1,0 +1,7 @@
+<svg width="38" height="38" xmlns="http://www.w3.org/2000/svg">
+    <g stroke="#E02020">
+        <ellipse opacity=".33" cx="18.542" cy="18.563" rx="18.042" ry="18.063"/>
+        <ellipse opacity=".66" cx="18.542" cy="18.563" rx="11.3" ry="11.313"/>
+    </g>
+    <ellipse fill="#E02020" cx="18.542" cy="18.563" rx="5.057" ry="5.063"/>
+</svg>

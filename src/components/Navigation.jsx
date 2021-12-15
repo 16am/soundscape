@@ -22,69 +22,71 @@ export function Navigation({ onLanguageChange, language }) {
     >
       <Box>
         <Button
-          size="sm"
           mr="-1"
+          size="sm"
           variant="ghost"
-          title={languages["home"][language]}
           borderRadius="full"
-          colorScheme={useColorModeValue("blackAlpha", "gray")}
           onClick={() => navigate("/")}
+          title={languages["home"][language]}
+          colorScheme={useColorModeValue("blackAlpha", "gray")}
         >
           <RiHome2Fill />
         </Button>
         <Button
-          size="sm"
           ml="3"
+          d="none"
+          size="sm"
           variant="outline"
           borderRadius="full"
-          colorScheme={useColorModeValue("blackAlpha", "gray")}
           onClick={() => navigate("/hydrophones")}
+          colorScheme={useColorModeValue("blackAlpha", "gray")}
         >
           {languages["hydrophones"][language]}
         </Button>
         <Button
-          size="sm"
           ml="3"
+          size="sm"
           variant="outline"
           borderRadius="full"
-          colorScheme={useColorModeValue("blackAlpha", "gray")}
           onClick={() => navigate("/maps")}
+          colorScheme={useColorModeValue("blackAlpha", "gray")}
         >
           {languages["maps"][language]}
         </Button>
         <Button
-          size="sm"
           ml="3"
+          size="sm"
           variant="outline"
           borderRadius="full"
-          colorScheme={useColorModeValue("blackAlpha", "gray")}
           onClick={() => navigate("/credits")}
+          colorScheme={useColorModeValue("blackAlpha", "gray")}
         >
           {languages["credits"][language]}
         </Button>
       </Box>
       <Box>
         <Button
-          size="sm"
           ml="3"
+          d="none"
+          size="sm"
           variant="outline"
           borderRadius="full"
-          colorScheme={useColorModeValue("blackAlpha", "gray")}
           onClick={toggleColorMode}
+          colorScheme={useColorModeValue("blackAlpha", "gray")}
         >
           {colorMode === "light"
             ? languages["dark"][language]
             : languages["light"][language]}
         </Button>
         <Button
-          d="none"
-          size="sm"
           ml="3"
+          d="none"
           minW="12"
+          size="sm"
           variant="outline"
           borderRadius="full"
-          colorScheme={useColorModeValue("blackAlpha", "gray")}
           onClick={onLanguageChange}
+          colorScheme={useColorModeValue("blackAlpha", "gray")}
         >
           {language === "EN" ? "IT" : "EN"}
         </Button>
