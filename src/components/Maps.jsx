@@ -196,7 +196,6 @@ export function Maps({ language }) {
             borderRadius="2xl"
             overflow="hidden"
             bg={bgs[selectedMap]}
-            opacity="0.8"
             w="full"
             minH="60vh"
             pos="relative"
@@ -235,7 +234,6 @@ export function Maps({ language }) {
                     minW="32"
                     as={Button}
                     bg={bgs[map]}
-                    opacity="0.7"
                     bgImage={map}
                     bgSize="cover"
                     borderRadius="2xl"
