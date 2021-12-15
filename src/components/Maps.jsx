@@ -221,7 +221,7 @@ export function Maps({ language }) {
               textAlign="center"
               justifyContent="center"
             >
-              <Heading fontSize="md" mb="2">
+              <Heading fontSize="sm" fontWeight="400" mb="2">
                 Select a map by clicking on it.
               </Heading>
               {/* <Flex w="full" my="4" justifyContent="center"> */}
