@@ -253,9 +253,17 @@ export function Maps({ language }) {
         </Flex>
 
         <Link
+          d="none"
           fontSize="xs"
           color="gray.500"
           href="https://levelup.gitconnected.com/react-d3-rendering-a-map-5e006b2f4895"
+          isExternal
+        ></Link>
+        <Link
+          d="none"
+          fontSize="xs"
+          color="gray.500"
+          href="https://codesandbox.io/s/react-audio-player-demo-zwhoc?file=/src/styles.css"
           isExternal
         ></Link>
       </Box>
