@@ -5,10 +5,10 @@ import { Box, Center, Flex, Link, Heading, Text } from "@chakra-ui/layout";
 import { useState } from "react";
 import { languages } from "../language/languages";
 
-import stage1 from "../data/stage1.png";
-import stage2 from "../data/stage2.png";
-import stage3 from "../data/stage3.png";
-import stage4 from "../data/stage4.png";
+import stage1 from "../data/stage1.svg";
+import stage2 from "../data/stage2.svg";
+import stage3 from "../data/stage3.svg";
+import stage4 from "../data/stage4.svg";
 
 const keyMoments = [
   {
