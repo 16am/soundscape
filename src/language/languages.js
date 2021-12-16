@@ -29,6 +29,6 @@ export const languages = {
   },
   credits_description: {
     IT: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc cursus, ante vitae sollicitudin rutrum, sem nisl porttitor nunc, id dignissim libero dui non lectus. Pellentesque eu aliquet sapien, in consequat tortor. Nulla lacinia, orci non sagittis fermentum, tellus dolor pellentesque tellus, vel pellentesque libero eros ac odio. Morbi ac purus ac risus ultrices vulputate sit amet quis leo. Morbi sed leo nec risus scelerisque congue et eget mauris. In nec sapien nunc. Etiam iaculis urna id mollis viverra.",
-    EN: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc cursus, ante vitae sollicitudin rutrum, sem nisl porttitor nunc, id dignissim libero dui non lectus. Pellentesque eu aliquet sapien, in consequat tortor. Nulla lacinia, orci non sagittis fermentum, tellus dolor pellentesque tellus, vel pellentesque libero eros ac odio. Morbi ac purus ac risus ultrices vulputate sit amet quis leo. Morbi sed leo nec risus scelerisque congue et eget mauris. In nec sapien nunc. Etiam iaculis urna id mollis viverra.",
+    EN: "This story was produced with the support of Internews’ Earth Journalism Network and Calouste Gulbenkian Foundation (UK Branch).",
   },
 };
