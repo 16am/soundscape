@@ -157,7 +157,7 @@ export function Maps({ language }) {
 
   return (
     <>
-      <Box pos="relative" zIndex="1">
+      <Box d={{ base: "none", sm: "block" }} pos="relative" zIndex="1">
         <Box
           mb={6}
           zIndex="2"
@@ -172,10 +172,6 @@ export function Maps({ language }) {
         </Box>
 
         <Flex px={{ base: 0, sm: 16 }} flexDir="column">
-          {/* <Flex w="full" justifyContent="center" my="4" fontWeight="extrabold">
-            {keyMoments[selectedMap].title}
-          </Flex> */}
-
           <Flex w="full" justifyContent="center" mb="8" fontWeight="regular">
             {keyMoments[selectedMap].description}
           </Flex>
@@ -210,7 +206,6 @@ export function Maps({ language }) {
               <Heading fontSize="sm" fontWeight="400" mb="2">
                 Select a map by clicking on it
               </Heading>
-              {/* <Flex w="full" my="4" justifyContent="center"> */}
               {maps.map((map, i) => (
                 <Flex flexDir="column" m="2" flexWrap="nowrap" maxW="32">
                   <Box
@@ -233,7 +228,6 @@ export function Maps({ language }) {
                   </Heading>
                 </Flex>
               ))}
-              {/* </Flex> */}
             </Flex>
           </Box>
         </Flex>
@@ -252,6 +246,35 @@ export function Maps({ language }) {
           href="https://codesandbox.io/s/react-audio-player-demo-zwhoc?file=/src/styles.css"
           isExternal
         ></Link>
+      </Box>
+
+      <Box d={{ base: "block", sm: "none" }} pos="relative" zIndex="1">
+        <Box
+          mb={6}
+          zIndex="2"
+          pos="relative"
+          lineHeight="shorter"
+          letterSpacing="tight"
+          fontWeight="extrabold"
+          fontSize={{ base: "3xl", sm: "4xl" }}
+          color={textColor}
+        >
+          {languages.maps[language]}
+        </Box>
+
+        {maps.map((map, i) => (
+          <Flex flexDir="column" m="2" mb="16" flexWrap="nowrap">
+            <Heading mb="4" fontSize="md">
+              {keyMoments[i].title}
+            </Heading>
+            <Flex borderRadius="2xl" mb="4" overflow="hidden">
+              <Image src={map} />
+            </Flex>
+            <Flex w="full" justifyContent="center" mb="4" fontWeight="regular">
+              {keyMoments[i].description}
+            </Flex>
+          </Flex>
+        ))}
       </Box>
     </>
   );
