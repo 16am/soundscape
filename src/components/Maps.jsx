@@ -172,11 +172,23 @@ export function Maps({ language }) {
         </Box>
 
         <Flex px={{ base: 0, sm: 16 }} flexDir="column">
-          {/* <Flex w="full" justifyContent="center" my="4" fontWeight="extrabold">
+          <Flex
+            d={{ base: "flex", sm: "none" }}
+            w="full"
+            justifyContent="center"
+            my="4"
+            fontWeight="extrabold"
+          >
             {keyMoments[selectedMap].title}
-          </Flex> */}
+          </Flex>
 
-          <Flex w="full" justifyContent="center" mb="8" fontWeight="regular">
+          <Flex
+            d={{ base: "none", sm: "flex" }}
+            w="full"
+            justifyContent="center"
+            mb="8"
+            fontWeight="regular"
+          >
             {keyMoments[selectedMap].description}
           </Flex>
         </Flex>
@@ -189,6 +201,7 @@ export function Maps({ language }) {
             minH="60vh"
             pos="relative"
             zIndex="1"
+            d={{ base: "none", sm: "block" }}
           >
             <Legend d="none" language={language} />
             <Center w="full" minH="60vh" fontWeight="extrabold">
@@ -207,12 +220,59 @@ export function Maps({ language }) {
               textAlign="center"
               justifyContent="center"
             >
-              <Heading fontSize="sm" fontWeight="400" mb="2">
+              <Heading
+                d={{ base: "none", sm: "block" }}
+                fontSize="sm"
+                fontWeight="400"
+                mb="2"
+              >
                 Select a map by clicking on it
               </Heading>
-              {/* <Flex w="full" my="4" justifyContent="center"> */}
+
               {maps.map((map, i) => (
-                <Flex flexDir="column" m="2" flexWrap="nowrap" maxW="32">
+                <Flex
+                  d={{ base: "none", sm: "flex" }}
+                  flexDir="column"
+                  m="2"
+                  flexWrap="nowrap"
+                  maxW="32"
+                >
+                  <Heading fontSize="sm">{keyMoments[i].title}</Heading>
+
+                  <Flex
+                    w="full"
+                    justifyContent="center"
+                    mb="8"
+                    fontWeight="regular"
+                  >
+                    {keyMoments[i].description}
+                  </Flex>
+
+                  <Box
+                    mb="1"
+                    key={i}
+                    w="calc(100vw - 32px)"
+                    as={Button}
+                    bg={bgs[map]}
+                    bgImage={map}
+                    bgSize="cover"
+                    borderRadius="2xl"
+                    borderWidth={3}
+                    borderColor={i === selectedMap ? "cyan.300" : "gray.400"}
+                    onClick={() => setSelectedMap(i)}
+                    _hover={{ bgImage: map, opacity: 0.8, bgSize: "cover" }}
+                  />
+                </Flex>
+              ))}
+
+              {maps.map((map, i) => (
+                <Flex
+                  d={{ base: "flex", sm: "none" }}
+                  flexDir="column"
+                  m="2"
+                  flexWrap="nowrap"
+                  maxW="32"
+                >
                   <Box
                     mb="1"
                     key={i}
@@ -233,7 +293,6 @@ export function Maps({ language }) {
                   </Heading>
                 </Flex>
               ))}
-              {/* </Flex> */}
             </Flex>
           </Box>
         </Flex>
