@@ -15,10 +15,13 @@ export function Navigation({ onLanguageChange, language }) {
       letterSpacing="tight"
       lineHeight="shorter"
       pos="fixed"
-      top="3"
+      top="0"
+      py="3"
       px="4"
       justifyContent="space-between"
       w="100%"
+      bg="gray.800"
+      boxShadow="0 0 2px #345"
     >
       <Box>
         <Button
