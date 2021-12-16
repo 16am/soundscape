@@ -18,6 +18,7 @@ export const languages = {
   word_and_pictures: { IT: "Testi e fotografie", EN: "Words and pictures" },
   web_design: { IT: "Web design", EN: "Web design" },
   more_credits: { IT: "Altri crediti", EN: "More credits" },
+  sound_credits: { IT: "Crediti audio", EN: "Sound credits" },
   description: {
     IT: "Nulla lacinia, orci non sagittis fermentum, tellus dolor pellentesque tellus, vel pellentesque libero eros.",
     EN: "Nihil lacinia, orci non sagittis fermentum, tellus dolor pellentesque tellus, vel pellentesque libero eros.",

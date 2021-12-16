@@ -55,11 +55,11 @@ export function Credits({ language }) {
           </Link>
         </Box>
       </Box>
-      <Box mt="8" d="none">
-        <Text mb="2">{languages.more_credits[language]}</Text>
+      <Box mt="8">
+        <Text mb="2">{languages.sound_credits[language]}</Text>
         <Box>
-          <b>Lorem Institute</b>
-          <Link href="#" color={linkColor} isExternal ml="2">
+          <b>Emiliano Battistini, Fabio Mina, Fondazione Cetacea</b>
+          <Link d="none" href="#" color={linkColor} isExternal ml="2">
             @twitter_account
           </Link>
         </Box>
