@@ -12,22 +12,22 @@ import stage4 from "../data/stage4.svg";
 
 const keyMoments = [
   {
-    title: "Before Soundscape",
+    title: "Before Soundscape Project",
     description:
       "Before the Soundscape Project, data on underwater noise in the north adriatic were scarce and discontinuous. Some sporadic and time-limited monitoring was carried out in past years, such as in the lagoon of Venice, but in practice, until 2020, the soundscape of the north adriatic was almost unknown. An information gap that has made it impossible to carry out extensive actions against noise pollution.",
   },
   {
-    title: "During first lockdown for Covid-19",
+    title: "Soundscape Network",
     description:
       "The Soundscape Project has activated a network of 9 hydrophones, placed at various depths, in correspondence of strategic places for maritime traffic or for the proximity of marine protected areas. The red dots on the map indicate the exact points where the instruments have been placed: 4 in Italy, 4 in Croatia (the two partner countries of the interreg project) and 1 in international waters.",
   },
   {
-    title: "After 6 months of hydrophone installed",
+    title: "Listening 24 hours a day",
     description:
       "Beginning in February 2020, for an entire year, Soundscape Project hydrophones recorded sounds around the clock, the largest sound-related data collection operation ever in this basin. A unique fact also occurred during the sampling period: due to the extended lockdown imposed for the covid-19 emergency in several countries, the hydrophones were able to record a period with large restrictions on vessel traffic",
   },
   {
-    title: "Today w/Soundscape running normally",
+    title: "A new perspective on underwater noise in the northern Adriatic Sea",
     description:
       "Starting from the collected data, and cross-referencing them with other data, such as those related to vessel traffic, the researchers produced a model of the sound situation of the entire North Adriatic during the sampling year. This model will represent a fundamental tool to better understand how to intervene for mitigating underwater noise pollution.",
   },
