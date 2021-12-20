@@ -140,12 +140,12 @@ export function Stage2() {
             </text>
             <text transform="translate(147 89)">
               <tspan x="477.91" y="284.763">
-                Losinj
+                Lošinj
               </tspan>
             </text>
             <text transform="translate(147 89)">
               <tspan x="741" y="591">
-                Zirje
+                Žirje
               </tspan>
             </text>
             <text transform="translate(147 89)">
@@ -449,12 +449,12 @@ export function Stage3() {
             </text>
             <text transform="translate(147 89)">
               <tspan x="477.91" y="284.763">
-                Losinj
+                Lošinj
               </tspan>
             </text>
             <text transform="translate(147 89)">
               <tspan x="741" y="591">
-                Zirje
+                Žirje
               </tspan>
             </text>
             <text transform="translate(147 89)">
@@ -776,12 +776,12 @@ export function Stage4() {
               </text>
               <text transform="translate(147 89)">
                 <tspan x="477.91" y="284.763">
-                  Losinj
+                  Lošinj
                 </tspan>
               </text>
               <text transform="translate(147 89)">
                 <tspan x="741" y="591">
-                  Zirje
+                  Žirje
                 </tspan>
               </text>
               <text transform="translate(147 89)">
