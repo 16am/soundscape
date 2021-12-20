@@ -563,7 +563,7 @@ export function Stage4() {
             onClick={onOpen}
             cursor="pointer"
           >
-            <g stroke="#E02020" fill="rgba(255, 255, 255, 0.01)">
+            <g stroke="#E02020" fill="rgba(255, 255, 255, .6)">
               <ellipse
                 opacity=".33"
                 cx="18.542"
