@@ -1,7 +1,7 @@
 export function Cities() {
   return (
     <svg width="1200" height="800" xmlns="http://www.w3.org/2000/svg">
-      <g fill="none" fill-rule="evenodd">
+      <g fill="none" fillRule="evenodd">
         <g transform="translate(259.694 124.019)" fill="#E02020">
           <circle
             transform="rotate(-3 705.314 596.535)"
@@ -70,10 +70,10 @@ export function Cities() {
             <circle cx="284.315" cy="7.5" r="7.5" />
           </g>
           <g
-            font-family="Inter-ExtraBold, Inter"
-            font-size="21"
-            font-weight="700"
-            letter-spacing="-.35"
+            fontFamily="Inter-ExtraBold, Inter"
+            fontSize="21"
+            fontWeight="700"
+            letterSpacing="-.35"
           >
             <text transform="translate(147 89)">
               <tspan x="54.719" y="489.74">
