@@ -12,7 +12,8 @@ import {
   Box,
   Flex,
 } from "@chakra-ui/react";
-import audio_sample_rimini from "../data/audio_sample_rimini.ogg";
+import audio_sample_rimini_ogg from "../data/audio_sample_rimini.ogg";
+import audio_sample_rimini_mp3 from "../data/audio_sample_rimini.mp3";
 import ReactAudioPlayer from "react-audio-player";
 import { useState } from "react";
 
@@ -486,6 +487,7 @@ export function Stage3() {
 
 export function Stage4() {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const [hover, setHover] = useState(false);
   return (
     <>
       <svg
@@ -562,14 +564,20 @@ export function Stage4() {
             transform="translate(291.456 517.678)"
             onClick={onOpen}
             cursor="pointer"
+            onMouseOver={() => setHover(true)}
+            onMouseLeave={() => setHover(false)}
           >
-            <g stroke="#E02020" fill="rgba(255, 255, 255, .6)">
+            <g
+              stroke={hover ? "#aaff99" : "#fed300"}
+              fill="rgba(255, 255, 255, 0.01)"
+            >
               <ellipse
                 opacity=".33"
                 cx="18.542"
                 cy="18.563"
                 rx="18.042"
                 ry="18.063"
+                style={{ transition: "0.3s stroke ease-in-out" }}
               />
               <ellipse
                 opacity=".66"
@@ -577,10 +585,12 @@ export function Stage4() {
                 cy="18.563"
                 rx="11.3"
                 ry="11.313"
+                style={{ transition: "0.3s stroke ease-in-out" }}
               />
             </g>
             <ellipse
-              fill="#E02020"
+              fill={hover ? "#aaff99" : "#fed300"}
+              style={{ transition: "0.3s fill ease-in-out" }}
               cx="18.542"
               cy="18.563"
               rx="5.057"
@@ -823,10 +833,16 @@ export function Stage4() {
             <Text>One minute of audio sample of Rimini hydrophone</Text>
             <Flex w="full" my="8" justifyContent="center">
               <ReactAudioPlayer
-                src={audio_sample_rimini}
+                //src={audio_sample_rimini}
                 controls
                 style={{ width: "100%" }}
-              />
+              >
+                <source src={audio_sample_rimini_ogg} type="audio/ogg"></source>
+                <source
+                  src={audio_sample_rimini_mp3}
+                  type="audio/mpeg"
+                ></source>
+              </ReactAudioPlayer>
             </Flex>
           </ModalBody>
         </ModalContent>
