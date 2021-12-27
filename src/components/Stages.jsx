@@ -19,7 +19,7 @@ import { useState } from "react";
 
 export function Stage1() {
   return (
-    <svg width="1200" height="800" xmlns="http://www.w3.org/2000/svg">
+    <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
       <g fill="none" fillRule="evenodd">
         <path fill="#181819" d="M0 1h1200v799H0z" />
         <path
@@ -38,7 +38,7 @@ export function Stage1() {
 
 export function Stage2() {
   return (
-    <svg width="1200" height="800" xmlns="http://www.w3.org/2000/svg">
+    <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
       <g fill="none" fillRule="evenodd">
         <path fill="#181819" d="M0 1h1200v799H0z" />
         <path fill="#505054" d="M0 0h1200v800H0z" />
@@ -177,7 +177,7 @@ export function Stage2() {
 }
 export function Stage3() {
   return (
-    <svg width="1200" height="800" xmlns="http://www.w3.org/2000/svg">
+    <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
       <g fill="none" fillRule="evenodd">
         <path fill="#181819" d="M0 1h1200v799H0z" />
         <path fill="#505054" d="M0 0h1200v800H0z" />
@@ -491,8 +491,7 @@ export function Stage4() {
   return (
     <>
       <svg
-        width="1200"
-        height="800"
+        viewBox="0 0 1200 800"
         xmlns="http://www.w3.org/2000/svg"
         xmlnsXlink="http://www.w3.org/1999/xlink"
       >
