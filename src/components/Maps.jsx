@@ -1,7 +1,6 @@
-import { Image } from "@chakra-ui/image";
 import { Button } from "@chakra-ui/button";
 import { useColorModeValue } from "@chakra-ui/color-mode";
-import { Box, Center, Flex, Link, Heading, Text } from "@chakra-ui/layout";
+import { Box, Center, Flex, Link, Heading } from "@chakra-ui/layout";
 import { useState } from "react";
 import { languages } from "../language/languages";
 
@@ -15,22 +14,22 @@ const keyMoments = [
   {
     title: "Before Soundscape Project",
     description:
-      "Before the Soundscape Project, data on underwater noise in the North Adriatic Sea were scarce and discontinuous. Some sporadic and time-limited monitoring was carried out in past years, such as in the lagoon of Venice, but in practice, until 2020, the soundscape of the north adriatic was almost unknown. An information gap that has made it impossible to carry out extensive actions against noise pollution.",
+      "Before the Soundscape Project, data on underwater noise in the North Adriatic Sea were scarce and discontinuous. Some sporadic and time-limited monitoring was carried out in past years, such as in the lagoon of Venice, but in practice, until 2020, the soundscape of the North Adriatic was almost unknown. This is an information gap that has made it impossible to carry out extensive actions against noise pollution.",
   },
   {
     title: "Soundscape Network",
     description:
-      "The Soundscape Project has activated a network of 9 hydrophones, placed at various depths, nearby strategic places for maritime traffic or for the proximity of marine protected areas. The red dots on the map indicate the exact points where the instruments have been placed: 4 in Italy, 4 in Croatia (the two partner countries of the interreg project) and 1 in international waters.",
+      "The Soundscape Project has activated a network of nine hydrophones, placed at various depths, nearby strategic places for maritime traffic or in proximity of marine protected areas. The red dots on the map indicate the exact points where the instruments have been placed: four in Italy, four in Croatia (the two partner countries of the interreg project) and one in international waters.",
   },
   {
     title: "Listening 24 hours a day",
     description:
-      "Beginning in February 2020, for an entire year, Soundscape Project hydrophones recorded sounds around the clock, the largest sound-related data collection operation ever in this basin. A unique fact also occurred during the sampling period: due to the extended lockdown imposed for the covid-19 emergency in several countries, the hydrophones were able to record over a period with large restrictions on vessel traffic.",
+      "For an entire year, beginning in February 2020, Soundscape Project hydrophones recorded sounds around the clock—the largest sound-related data collection operation ever in this basin. Something unique also occurred during the sampling period: Due to the extended lockdown imposed for the COVID-19 emergency in several countries, the hydrophones were able to record over a period when vessel traffic was heavily restricted.",
   },
   {
     title: "A new perspective on underwater noise in the North Adriatic Sea",
     description:
-      "Starting from the collected data, and cross-referencing them with other data, such as those related to vessel traffic, the researchers produced a model of the sound situation of the entire North Adriatic Sea during the sampling year. This model will represent a fundamental tool to better understand how to intervene for mitigating underwater noise pollution.",
+      "The researchers produced a model of the sound situation of the entire North Adriatic Sea during the sampling year beginning with the collected data and later with cross-referenced data from other sources, such as those related to vessel traffic. This model will represent a fundamental tool to better understand how to mitigate underwater noise pollution.",
   },
 ];
 
